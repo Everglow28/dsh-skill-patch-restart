@@ -4,6 +4,8 @@
 
 原理:官方菜单代码里本就存在该菜单项(`app.relaunch()` + 退出),仅开发模式显示。本补丁把 `app.asar` 内 main.js 的 `...development ? [` 等长 11 字节替换为 `...true/*dev*/ ? [`,不移动任何归档偏移,不改其他逻辑。每次运行都会重新解析 asar 头并重新定位,官方更新覆盖 app.asar 后重跑即可。
 
+![打补丁后"应用"菜单出现"重启应用与 Host"](docs/screenshot-restart-menu.png)
+
 ## 安装(作为 DSH skill)
 
 DSH 会扫描 `~/.dsh/skills/` 并自动监视变化,克隆即生效(新会话可见,无需重启)。skill 名来自 `SKILL.md` 的 frontmatter(`repair-restart-menu`),与克隆到的文件夹名无关:
