@@ -1,5 +1,11 @@
 # repair-restart-menu — DeepSeek Harness "重启应用与 Host" 菜单项补丁 (Windows)
 
+![Platform](https://img.shields.io/badge/platform-Windows-blue)
+![Runtime](https://img.shields.io/badge/runtime-Node.js-green)
+![Verified on DSH](https://img.shields.io/badge/verified%20on-DeepSeek%20Harness%200.2.0--rc.2-orange)
+![Last commit](https://img.shields.io/github/last-commit/Everglow28/dsh-skill-patch-restart)
+![Repo size](https://img.shields.io/github/repo-size/Everglow28/dsh-skill-patch-restart)
+
 为 DeepSeek Harness 桌面版(Windows)启用官方内置但默认隐藏的 **"重启应用与 Host"** 应用菜单项(左上角"应用"菜单)。
 
 原理:官方菜单代码里本就存在该菜单项(`app.relaunch()` + 退出),仅开发模式显示。本补丁把 `app.asar` 内 main.js 的 `...development ? [` 等长 11 字节替换为 `...true/*dev*/ ? [`,不移动任何归档偏移,不改其他逻辑。每次运行都会重新解析 asar 头并重新定位,官方更新覆盖 app.asar 后重跑即可。
