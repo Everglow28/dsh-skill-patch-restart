@@ -6,10 +6,10 @@
 
 ## 安装(作为 DSH skill)
 
-DSH 会扫描 `~/.dsh/skills/` 并自动监视变化,克隆即生效(新会话可见,无需重启):
+DSH 会扫描 `~/.dsh/skills/` 并自动监视变化,克隆即生效(新会话可见,无需重启)。skill 名来自 `SKILL.md` 的 frontmatter(`repair-restart-menu`),与克隆到的文件夹名无关:
 
 ```
-git clone https://github.com/<你>/repair-restart-menu.git "%USERPROFILE%\.dsh\skills\repair-restart-menu"
+git clone https://github.com/Everglow28/dsh-skill-patch-restart.git "%USERPROFILE%\.dsh\skills\repair-restart-menu"
 ```
 
 之后在 DSH 会话里对 agent 说"运行 repair-restart-menu"即可;也可以完全不用 DSH,直接在终端手动执行下面的命令。
