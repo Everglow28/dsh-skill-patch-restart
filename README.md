@@ -1,10 +1,6 @@
 # repair-restart-menu — DeepSeek Harness "重启应用与 Host" 菜单项补丁 (Windows)
 
-![Platform](https://img.shields.io/badge/platform-Windows-blue)
-![Runtime](https://img.shields.io/badge/runtime-Node.js-green)
-![Verified on DSH](https://img.shields.io/badge/verified%20on-DeepSeek%20Harness%200.2.0--rc.2-orange)
-![Last commit](https://img.shields.io/github/last-commit/Everglow28/dsh-skill-patch-restart)
-![Repo size](https://img.shields.io/github/repo-size/Everglow28/dsh-skill-patch-restart)
+![Platform](https://img.shields.io/badge/platform-DeepSeek%20Harness-blue)
 
 为 DeepSeek Harness 桌面版(Windows)启用官方内置但默认隐藏的 **"重启应用与 Host"** 应用菜单项(左上角"应用"菜单)。
 
